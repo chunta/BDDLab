@@ -10,7 +10,8 @@ target 'BDDLab' do
 
   target 'BDDLabTests' do
     inherit! :search_paths
-    pod 'Cucumberish'
+    pod 'Quick', '4.0.0'
+    pod 'Nimble', '13.0'
   end
 
 end
