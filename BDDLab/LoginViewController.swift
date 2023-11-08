@@ -13,7 +13,6 @@ class LoginViewController: UIViewController {
     init(viewModel: ILoginViewModel) {
         self.loginViewModel = viewModel
         super.init(nibName: nil, bundle: nil)
-        self.loginViewModel.eventHandler = self
     }
     
     required init?(coder: NSCoder) {
@@ -25,11 +24,8 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func onClick(_ sender: UIButton) {
-        loginViewModel.login(userInput.text ?? "", passwordInput.text ?? "")
-    }
-}
-
-extension LoginViewController: ILoginViewModelEventHandler {
-    func loginDidComplete(_ error: Error?) {
+        loginViewModel.login(userName: userInput.text ?? "",
+                             password: passwordInput.text ?? "") { success, error in
+        }
     }
 }

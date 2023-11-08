@@ -1,36 +1,40 @@
-//
-//  BDDLabTests.swift
-//  BDDLabTests
-//
-//  Created by apple on 2023/11/8.
-//
-
-import XCTest
 @testable import BDDLab
+import XCTest
 
-final class BDDLabTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+final class BDDLabTestLoginViewModel: XCTestCase {
+    
+    private var loginService: BDDLabLoginServiceMock!
+    private var loginViewModel: LoginViewModel!
+    private let userName: String = "Gary"
+    private let password: String = "68K^|&4$Bze0"
+    
+    override func setUp() {
+        loginService = BDDLabLoginServiceMock()
+        loginViewModel = LoginViewModel(service: loginService)
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    /// Make sure we return error when username or password is empty.
+    func testViewModelWithEmptyInput() {
+        loginViewModel.login(userName: "", password: "") { success, error in
+            XCTAssertFalse(success)
         }
     }
-
+    
+    /// Make sure we return error when there is an issue in networking.
+    func testViewModelWithNetworkingError() {
+        loginService.error = BBDError.networkError(errorCode: 408, description: "Request timeout")
+        loginViewModel.login(userName: userName, password: password) { success, error in
+            XCTAssertFalse(success)
+            XCTAssertNotNil(error)
+        }
+    }
+    
+    /// Make sure we succeed logining when input field are ready and there is no networking issue.
+    func testViewModelWhenSuccessfullyLogin() {
+        loginService.error = nil
+        loginViewModel.login(userName: userName, password: password) { success, error in
+            XCTAssertTrue(success)
+            XCTAssertNil(error)
+        }
+    }
 }

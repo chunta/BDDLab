@@ -1,0 +1,25 @@
+# CocoaPods #
+Pods/
+Podfile.lock
+*.xcworkspace
+
+# User-specific files #
+.podfile
+
+# Xcode #
+#
+#  Recommend to not have it in the repository, uncomment if you use it.
+# *.xcuserdata
+
+# Generated files #
+#
+#  Build products
+#
+build/
+
+#  Automatic backup files
+#
+*.swp
+*~.nib
+*.swp
+
