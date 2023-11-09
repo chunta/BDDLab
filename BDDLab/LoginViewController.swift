@@ -24,8 +24,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func onClick(_ sender: UIButton) {
-        loginViewModel.login(userName: userInput.text ?? "",
-                             password: passwordInput.text ?? "") { success, error in
+        loginViewModel.login(userName: userInput.text ?? "", password: passwordInput.text ?? "") { success, error in
         }
     }
 }

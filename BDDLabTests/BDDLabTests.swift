@@ -22,7 +22,7 @@ final class BDDLabTestLoginViewModel: XCTestCase {
     
     /// Make sure we return error when there is an issue in networking.
     func testViewModelWithNetworkingError() {
-        loginService.error = BBDError.networkError(errorCode: 408, description: "Request timeout")
+        loginService.error = BDDError.networkError(errorCode: 408, description: "Request timeout")
         loginViewModel.login(userName: userName, password: password) { success, error in
             XCTAssertFalse(success)
             XCTAssertNotNil(error)

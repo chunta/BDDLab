@@ -1,6 +1,6 @@
 import Foundation
 
-enum BBDError: Error {
+enum BDDError: Error {
     case emptyUserNameOrPassword
     case unknown(description: String)
     case networkError(errorCode: Int, description: String)

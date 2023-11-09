@@ -17,7 +17,7 @@ class LoginViewModel: ILoginViewModel {
     
     func login(userName: String, password: String, completion: @escaping (Bool, Error?) -> Void) {
         guard userName.count > 0 && password.count > 0 else {
-            completion(false, BBDError.emptyUserNameOrPassword)
+            completion(false, BDDError.emptyUserNameOrPassword)
             return
         }
         service?.login(userName: userName, 

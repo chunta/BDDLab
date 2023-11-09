@@ -17,7 +17,8 @@
 		1891EE202AFB82000001212F /* ErrorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1891EE1B2AFB82000001212F /* ErrorList.swift */; };
 		1891EE212AFB82000001212F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1891EE1C2AFB82000001212F /* LoginViewModel.swift */; };
 		1891EE222AFB82000001212F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1891EE1D2AFB82000001212F /* LoginViewController.swift */; };
-		18B969AE2AFBDD1F00696908 /* SimpleBDDTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B969AD2AFBDD1F00696908 /* SimpleBDDTest.swift */; };
+		18B969AE2AFBDD1F00696908 /* BDDLabTestLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B969AD2AFBDD1F00696908 /* BDDLabTestLoginView.swift */; };
+		18C30CC02AFC75F500545AE0 /* BDDLabLoginViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C30CBF2AFC75F500545AE0 /* BDDLabLoginViewModelMock.swift */; };
 		18EF18572AFB88BC00A010E3 /* BDDLabLoginServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EF18562AFB88BC00A010E3 /* BDDLabLoginServiceMock.swift */; };
 		C81396037C1C462BBEA929D4 /* Pods_BDDLab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8B1325C53C10115B95C2D9B /* Pods_BDDLab.framework */; };
 		D9B85D4757004EA62EA031ED /* Pods_BDDLabTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9472D13FB1E3F5EF780E7DA7 /* Pods_BDDLabTests.framework */; };
@@ -48,7 +49,8 @@
 		1891EE1B2AFB82000001212F /* ErrorList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorList.swift; sourceTree = "<group>"; };
 		1891EE1C2AFB82000001212F /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		1891EE1D2AFB82000001212F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		18B969AD2AFBDD1F00696908 /* SimpleBDDTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleBDDTest.swift; sourceTree = "<group>"; };
+		18B969AD2AFBDD1F00696908 /* BDDLabTestLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDDLabTestLoginView.swift; sourceTree = "<group>"; };
+		18C30CBF2AFC75F500545AE0 /* BDDLabLoginViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDDLabLoginViewModelMock.swift; sourceTree = "<group>"; };
 		18EF18562AFB88BC00A010E3 /* BDDLabLoginServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDDLabLoginServiceMock.swift; sourceTree = "<group>"; };
 		9472D13FB1E3F5EF780E7DA7 /* Pods_BDDLabTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BDDLabTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96787296DE2F5801A0F55060 /* Pods-BDDLabTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BDDLabTests.release.xcconfig"; path = "Target Support Files/Pods-BDDLabTests/Pods-BDDLabTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -117,9 +119,10 @@
 		1891EDFF2AFB81790001212F /* BDDLabTests */ = {
 			isa = PBXGroup;
 			children = (
-				1891EE002AFB81790001212F /* BDDLabTests.swift */,
 				18EF18562AFB88BC00A010E3 /* BDDLabLoginServiceMock.swift */,
-				18B969AD2AFBDD1F00696908 /* SimpleBDDTest.swift */,
+				18C30CBF2AFC75F500545AE0 /* BDDLabLoginViewModelMock.swift */,
+				18B969AD2AFBDD1F00696908 /* BDDLabTestLoginView.swift */,
+				1891EE002AFB81790001212F /* BDDLabTests.swift */,
 			);
 			path = BDDLabTests;
 			sourceTree = "<group>";
@@ -344,7 +347,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				18EF18572AFB88BC00A010E3 /* BDDLabLoginServiceMock.swift in Sources */,
-				18B969AE2AFBDD1F00696908 /* SimpleBDDTest.swift in Sources */,
+				18C30CC02AFC75F500545AE0 /* BDDLabLoginViewModelMock.swift in Sources */,
+				18B969AE2AFBDD1F00696908 /* BDDLabTestLoginView.swift in Sources */,
 				1891EE012AFB81790001212F /* BDDLabTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
